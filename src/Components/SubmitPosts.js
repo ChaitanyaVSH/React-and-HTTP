@@ -1,3 +1,4 @@
+import Axios from "axios";
 import React, { Component } from "react";
 
 class SubmitPosts extends Component {
@@ -17,10 +18,23 @@ class SubmitPosts extends Component {
     });
   };
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault();
     const username = this.state.userid;
     const title = this.state.title;
     const body = this.state.body;
+
+    Axios.post("https://jsonplaceholder.typicode.com/posts", {
+      userid: username,
+      title: title,
+      body: body,
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   render() {
