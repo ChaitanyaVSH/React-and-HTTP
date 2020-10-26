@@ -35,7 +35,7 @@ class Posts extends Component {
         {posts.length
           ? posts.map((post) => (
               <div key={post.id} className="container">
-                <h3>{post.title}</h3>
+                <h1>{post.title}</h1>
                 <p>{post.body}</p>
               </div>
             ))
