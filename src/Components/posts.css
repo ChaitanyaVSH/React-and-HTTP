@@ -1,0 +1,7 @@
+.container {
+  border-left: 5px solid lightgreen;
+  text-align: start;
+  padding: 10px;
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
